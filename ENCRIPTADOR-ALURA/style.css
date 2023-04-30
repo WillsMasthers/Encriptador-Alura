@@ -1,0 +1,180 @@
+body{
+    background: #E5E5E5;
+    margin: 0;
+    Padding: 0;
+}
+
+
+.logo-alura {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+    
+}
+
+.texto-a-encriptar{
+
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    left: 240px;
+    top: 168px;
+    background-color: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    color: #0A3871;
+    resize: none;
+    border-color: #E5E5E5;
+}
+
+
+.cuadro-respuesta {
+
+    position: absolute;
+    width: 400px;
+    height: 890px;
+    left: 73%;
+    top: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    margin: 0%;
+
+
+}
+
+.dibujo-nene {
+
+    margin-top: 100px;
+    margin-left: 30px;
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    top: 283px;
+
+    
+}
+
+.texto-encriptado {
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #495057;
+    margin: 20px;
+    resize: none;
+    border-color: #FFFFFF;
+    width: 90%;
+
+
+}
+
+.ingrese-texto{
+    
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    padding: 20px;
+    resize: none;
+    border-color: #FFFFFF;
+    width: 88%;
+    margin: 0%;
+
+}
+.circulo-exclamacion{
+
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    display: flex;
+    opacity: 0.5;
+    margin: 0;
+    left: 240px;
+    top: 794px;
+}
+.importante{
+
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #495057;
+    opacity: 0.8;
+    display: block;
+    position: absolute;
+    width: 350px;
+    left: 265px;
+    top: 770px;
+
+
+}
+.botones{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    position: absolute;
+    width: 656px;
+    height: 67px;
+    left: 240px;
+    top: 820px;
+    margin-top: 10px;
+}
+
+.Encriptar {
+
+    display: block;
+    width: 328px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    color:rgba(243, 245, 252, 1);
+    font-size: 15px;
+
+}
+
+.Desencriptar {
+
+    display: block;
+    width: 328px;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 15px;
+}
+
+.pie-pagina{
+
+    background-color: #0A3871;
+    position: relative;
+    padding-left: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 0;
+    top: 950px;
+    
+}
+
+.texto-pie{
+
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    font-size: 13px;
+
+}
