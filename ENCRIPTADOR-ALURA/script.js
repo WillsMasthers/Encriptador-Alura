@@ -7,15 +7,15 @@
 //La letra "u" es convertida para "ufat"//
 
 
-var botonEencriptar = document.querySelector(".botonencriptar");
-var botonDesencriptar = document.querySelector(".botondesencriptar");
+var botonencriptar = document.querySelector(".botonencriptar");
+var botondesencriptar = document.querySelector(".botondesencriptar");
 var dibujo = document.querySelector(".imagendibujo");
 var textoinicial = document.querySelector(".texto-a-encriptar");
 var resultado = document.querySelector(".texto-final");
 
 
-botonEencriptar.onclick = encriptar;
-botonDesencriptar.onclick = encriptar;
+botonencriptar.onclick = encriptar;
+botondesencriptar.onclick = desencriptar;
 
 function encriptar(){
     ocultar();
@@ -26,8 +26,8 @@ function encriptar(){
 
 function desencriptar(){
     ocultar();
-    var textoaencriptar = recuperartexto()
-    resultado.textContent = desencriptarTexto (textoaencriptar);
+    var textoadencriptar = recuperartexto()
+    resultado.textContent = desencriptarTexto (textoadencriptar);
 
 }
 

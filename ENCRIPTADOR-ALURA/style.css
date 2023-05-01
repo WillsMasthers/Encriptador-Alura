@@ -147,7 +147,6 @@ body{
 
 .Encriptar {
 
-    display: block;
     width: 328px;
     height: 67px;
     background: #0A3871;
@@ -159,7 +158,6 @@ body{
 
 .Desencriptar {
 
-    display: block;
     width: 328px;
     height: 67px;
     background: #D8DFE8;
