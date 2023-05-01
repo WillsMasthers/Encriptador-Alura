@@ -7,100 +7,73 @@
 //La letra "u" es convertida para "ufat"//
 
 
-var botonencriptar = document.querySelector(".botonencriptar");
-var botondesencriptar = document.querySelector(".botondesencriptar");
-var dibujo = document.querySelector(".imagendibujo");
-var textoinicial = document.querySelector(".texto-a-encriptar");
-var resultado = document.querySelector(".texto-final");
+let encriptar = document.getElementById("encriptar");
 
+encriptar.addEventListener('click', () => {
+    let { value } = document.getElementById("textoAEncriptar");
+    let data = value.toLowerCase().split('');
+    let final = document.getElementById("textoEncriptado");
+    let newArray = [];
 
-botonencriptar.onclick = encriptar;
-botondesencriptar.onclick = desencriptar;
+//ENCRIPTAR
 
-function encriptar(){
-    ocultar();
-    var textoaencriptar = recuperartexto()
-    resultado.textContent = encriptarTexto (textoaencriptar);
-
-}
-
-function desencriptar(){
-    ocultar();
-    var textoadencriptar = recuperartexto()
-    resultado.textContent = desencriptarTexto (textoadencriptar);
-
-}
-
-function recuperartexto() {
-
-    var textoaencriptar = document.querySelector(".texto-a-encriptar");
-    return textoaencriptar.value;
-}
-
-function ocultar(){
-    imagendibujo.classList.add("ocultar");
-    textoinicial.classList.add("ocultar");
-}
-
-function encriptarTexto(textofinal) {
-    var texto = textofinal;
-    var textofinal = "";
-
-    for (var i = 0; i < texto.length; i++) {
-        if (texto[i] == "e"){
-                textofinal = textofinal + "enter"
+    data.map(item => {
+        if (item === 'a') {
+            newArray.push('ai');
+        } else if (item === 'e') {
+            newArray.push('enter');
+        } else if (item === 'i') {
+            newArray.push('imes');
+        } else if (item === 'o') {
+            newArray.push('ober');
+        } else if (item === 'u') {
+            newArray.push('ufat');
+        } else {
+            newArray.push(item);
         }
-        else if (texto[i] =="a"){
-            textofinal = textofinal + "ai"
-        }
-        else if (texto[i] =="i"){
-            textofinal = textofinal + "imes"
-        }
-        else if (texto[i] =="o"){
-            textofinal = textofinal + "ober"
-        }
-        else if (texto[i] =="u"){
-            textofinal = textofinal + "ufat"
-        }
-        else {
-            textofinal = textofinal + texto[i]
-        }
+    });
 
-    }
-    return textofinal;
-}
+    final.innerHTML = newArray.join('')
+    document.getElementById("textoAEncriptar").value = '';
+    document.getElementById("textoEncriptado").style.display = 'none';
 
-function deencriptarTexto(textofinal) {
-    var texto = textofinal;
-    var textofinal = "";
+});
 
-    for (var i = 0; i < texto.length; i++) {
-        if (texto[i] == "enter"){
-                textofinal = textofinal + "e"
-        }
-        else if (texto[i] =="ai"){
-            textofinal = textofinal + "a"
-        }
-        else if (texto[i] =="imes"){
-            textofinal = textofinal + "i"
-        }
-        else if (texto[i] =="ober"){
-            textofinal = textofinal + "o"
-        }
-        else if (texto[i] =="ufat"){
-            textofinal = textofinal + "u"
-        }
-        else {
-            textofinal = textofinal + texto[i]
-        }
 
-    }
-    return textofinal;
-}
+//DESENCRIPTAR
+let desencriptar = document.getElementById("desencriptar");
 
-const botonCopiar = document.querySelector(".boton-copiar");
-    botonCopiar.addEventListener("click", copiar = () => {
-        var contenido = document.querySelector(".texto-final").textContent;
-        navigator.clipboard.writeText(contenido);
-        console.log("holis");
-    })
+desencriptar.addEventListener('click', () => {
+    let { value } = document.getElementById("textoAEncriptar");
+    let data = value.toLowerCase()
+    let result = data.replaceAll('ai', 'a').replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ober', 'o').replaceAll('ufat', 'u')
+    let final = document.getElementById("div-p");
+
+    final.innerHTML = result
+    document.getElementById("textoEncriptado").style.display = 'none';
+    document.getElementById("textoFinal").style.display = 'flex'
+    document.getElementById("textoAEncriptar").value = '';
+
+});
+
+
+//BOTON COPIAR
+
+let copy = document.getElementById("copy")
+
+copy.addEventListener('click', () => {
+    let content = document.getElementById("textoFinal");
+
+    let element = content.innerText;
+    let inputelement = document.createElement('input');
+    inputelement.setAttribute('value', element);
+    document.body.appendChild(inputelement);
+    inputelement.select();
+    document.execCommand('copy');
+
+    inputelement.parentNode.removeChild(inputelement);
+    document.getElementById("textoFinal").style.display = 'none'
+    document.getElementById("textoEncriptado").style.display = 'flex'
+
+
+});

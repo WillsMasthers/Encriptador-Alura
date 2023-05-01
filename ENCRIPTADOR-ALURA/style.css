@@ -1,4 +1,4 @@
-body{
+body {
     background: #E5E5E5;
     margin: 0;
     Padding: 0;
@@ -16,10 +16,10 @@ body{
     height: 48px;
     left: 40px;
     top: 40px;
-    
+
 }
 
-.texto-a-encriptar{
+.texto-a-encriptar {
 
     position: absolute;
     width: 50%;
@@ -46,6 +46,7 @@ body{
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     margin: 0%;
+    border-color: #FFFFFF;
 
 
 }
@@ -59,54 +60,75 @@ body{
     left: 1032px;
     top: 283px;
 
-    
+
 }
 
 .texto-encriptado {
 
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
+    font-family: 'Inter', sans-serif; 
+    color: black;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+    border-color: #ffffff;
+    border-style: none;
+    height: 100px;
+
+
+}
+
+.ingrese-texto {
+
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    font-size: 15px;
     text-align: center;
     color: #495057;
-    margin: 20px;
-    resize: none;
     border-color: #FFFFFF;
     width: 90%;
-
-
-}
-
-.ingrese-texto{
-    
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    color: #495057;
-    padding: 20px;
-    resize: none;
-    border-color: #FFFFFF;
-    width: 88%;
+    height: 100px;
+    border-style: none;
+    margin-top: 0px;
+    margin-left: 20px;
 
 }
 
-.Copiar{
+.Copiar {
 
     width: 328px;
     height: 67px;
-    margin: auto;
     background: #ffffff;
-    border: 1px solid #0A3871;
+    border: 2px solid #0A3871;
     border-radius: 24px;
     font-size: 15px;
-    margin-top:  47%;
+    margin-top: 41%;
+    margin-left: 10%;
+    top: 50px;
+
+
 }
 
-.circulo-exclamacion{
+.Copiar:hover,
+button:focus {
+    color: #06204098;
+}
+
+.Copiar:hover:before,
+button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.Copiar:active {
+    transform: scale(0.9);
+}
+
+.circulo-exclamacion {
 
     width: 16px;
     height: 16px;
@@ -117,7 +139,8 @@ body{
     left: 240px;
     top: 794px;
 }
-.importante{
+
+.importante {
 
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -131,13 +154,12 @@ body{
 
 
 }
-.botones{
+
+.botones {
 
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     gap: 24px;
-    position: absolute;
+    position: relative;
     width: 656px;
     height: 67px;
     left: 240px;
@@ -151,10 +173,41 @@ body{
     height: 67px;
     background: #0A3871;
     border-radius: 24px;
-    color:rgba(243, 245, 252, 1);
+    color: rgba(243, 245, 252, 1);
     font-size: 15px;
 
 }
+
+.Encriptar:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 24px;
+    z-index: -1;
+}
+
+.Encriptar:hover,
+button:focus {
+    color: #afccee98;
+}
+
+.Encriptar:hover:before,
+button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.Encriptar:active {
+    transform: scale(0.9);
+}
+
 
 .Desencriptar {
 
@@ -166,7 +219,37 @@ body{
     font-size: 15px;
 }
 
-.pie-pagina{
+.Desencriptar:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 24px;
+    z-index: -1;
+}
+
+.Desencriptar:hover,
+button:focus {
+    color: #06204098;
+}
+
+.Desencriptar:hover:before,
+button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.Desencriptar:active {
+    transform: scale(0.9);
+}
+
+.pie-pagina {
 
     background-color: #0A3871;
     position: relative;
@@ -175,10 +258,10 @@ body{
     padding-bottom: 7px;
     padding-right: 0;
     top: 950px;
-    
+
 }
 
-.texto-pie{
+.texto-pie {
 
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -190,6 +273,6 @@ body{
 }
 
 
-.copiar{
+.copiar {
     display: none;
 }

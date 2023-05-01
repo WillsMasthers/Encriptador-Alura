@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge encriptador de texto Alura </title>
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/Logo-favicon.png" class="favicon">
+    <script type="text/javascript" src="script.js"></script>
 
 
 </head>
@@ -29,7 +29,7 @@
     <main>
 
         <section class="texto">
-            <textarea class="texto-a-encriptar" id="texto-a-encriptar"> Ingrese su texto aquí </textarea>
+            <textarea class="texto-a-encriptar" id="textoAEncriptar"> Ingrese su texto aquí </textarea>
         </section>
 
         <section class="cuadro-respuesta">
@@ -37,9 +37,8 @@
                 <img src="assets/Muñeco.png" class="dibujo-nene" id="imagendibujo">
             </div>
             <div>
-                <textarea class="texto-encriptado" id="texto-encriptado">Ningún mensaje fue encontrado</textarea>
-                <textarea class="ingrese-texto"
-                    id="texto-final">Ingresa el texto que desees encriptar o desencriptar.</textarea>
+                <input class="texto-encriptado" id="textoEncriptado" placeholder="Ningún mensaje fue encontrado"></input>
+                <input class="ingrese-texto" id="textoFinal" placeholder="Ingresa el texto que desees encriptar o desencriptar."></input>
             </div>
             <div>
                 <button class="Copiar" id="boton-copiar" onclick="copiarTexto()">Copiar </button>
@@ -58,10 +57,10 @@
         </section>
 
         <section class="botones">
-            <div>
-                <button class="Encriptar" id="botonencriptar">Encriptar</button>
-                <button class="Desencriptar" id="botondesencriptar">Desencriptar</button>
-            </div>
+
+            <button class="Encriptar" id="botonencriptar">Encriptar</button>
+            <button class="Desencriptar" id="botondesencriptar">Desencriptar</button>
+
         </section>
 
 
