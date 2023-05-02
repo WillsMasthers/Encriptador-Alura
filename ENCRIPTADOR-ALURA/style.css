@@ -94,7 +94,7 @@ body {
 .textoResultado {
 
     width: 355px;
-    height: 755px;
+    height: 300px;
     left: 1032px;
     top: 72px;
     font-family: 'Inter', sans-serif;
@@ -169,12 +169,13 @@ button:focus:before {
 
     display: flex;
     gap: 24px;
-    position: relative;
     width: 656px;
     height: 67px;
     left: 240px;
     top: 820px;
     margin-top: 10px;
+    position: relative;
+
 }
 
 .Encriptar {
@@ -286,42 +287,86 @@ button:focus:before {
     display: none;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
     * {
         margin: 0px;
         box-sizing: border-box;
+        
     }
 
     .texto-a-encriptar {
-        width: 647px;
-        height: 330px;
-        left: 40px;
-        top: 192px;
-        font-family: 'Inter';
+        width: 310px;
+        height: 280px;
+        left: 25px;
+        top: 145px;
+        font-family: 'Inter', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 32px;
         line-height: 150%;
         color: #0A3871;
+        position: relative;
+    }
+
+    .circulo-exclamacion {
+        left: 30px;
+        top: 462px;
+        bottom: 0%;
+    }
+
+    .importante {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        font-size: 15px;
+        position: absolute;
+        height: 18px;
+        left: 50px;
+        top: 460px;
+
+    }
+
+    .botones {
+        padding: 0px;
+        position: absolute;
+        width: 688px;
+        height: 67px;
+        left: 16px;
+        top: 500px;
+        flex-wrap: wrap;
+    }
+
+    .Encriptar {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+        width: 343px;
+        height: 67px;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .Desencriptar {
+
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+        width: 343px;
+        height: 67px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
     }
 
     .cuadro-respuesta {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-        position: absolute;
-        width: 655px;
-        height: 224px;
-        left: 14px;
-        top: 800px;
-    }
-
-    .dibujo-nene {
-        display: none
-    }
-
-    .texto-encriptado {
 
         display: flex;
         flex-direction: column;
@@ -329,62 +374,68 @@ button:focus:before {
         padding: 32px;
         gap: 32px;
         position: absolute;
-        width: 688px;
-        height: 133px;
-        left: 40px;
-        top: 100px;
+        width: 331px;
+        height: 231px;
+        margin: 0;
+        left: 20px;
+        top: 707px;
     }
 
-    .importante {
+    
+    .dibujo-nene {
+        display: none
+    }
 
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        color: #495057;
-        opacity: 0.8;
-        display: block;
+    .texto-encriptado {
+
         position: absolute;
-        width: 350px;
-        left: 44px;
-        top: 648px;
-
-    }
-
-    .circulo-exclamacion {
+        width: 300px;
+        height: 220px;
+        left: 15px;
+        margin: 0;
         font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        color: #495057;
-        opacity: 0.8;
-        display: block;
-        position: absolute;
-        width: 350px;
-        left: -145px;
-        top: 650px;
+
     }
+
 
     .ingrese-texto {
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        width: 263px;
+        height: 48px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        text-align: center;
+        position: absolute;
+        left: 10px;
+        top: 95px;
+
     }
 
-    .botones {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 24px;
-        position: absolute;
-        width: 688px;
-        height: 67px;
-        left: 7px;
-        top: 695px;
+    .textoResultado {
+
+        width: 355px;
+        height: 300px;
+        left: 1050px;
+        top: 72px;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        margin: 5px;
+        border-color: #0A3871;
+        color: #495057;
     }
+
+.botonCopiar{
+    position: absolute;
+    padding: 0px;
+    width: 688px;
+    height: 67px;
+    left: -70px;
+    top: 260px;
+    flex-wrap: wrap;
 }
 
-.pie-pagina {
-    background-color: #0A3871;
-    position: relative;
-    top: 1144px;
-} */
+    .pie-pagina {
+        background-color: #0A3871;
+        position: relative;
+        top: 895px;
+    }
+}
