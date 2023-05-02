@@ -29,7 +29,7 @@ body {
     background-color: #E5E5E5;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
-    color: #0A3871;
+    color: #0a3871;
     resize: none;
     border-color: #E5E5E5;
 }
@@ -39,8 +39,8 @@ body {
 
     position: absolute;
     width: 400px;
-    height: 890px;
-    left: 73%;
+    height: 900px;
+    left: 72.5%;
     top: 30px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -65,18 +65,14 @@ body {
 
 .texto-encriptado {
 
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
     color: black;
     font-weight: 700;
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
-    margin-left: 20px;
     margin-bottom: 0;
-    width: 90%;
     border-color: #ffffff;
-    border-style: none;
-    height: 100px;
 
 
 }
@@ -95,10 +91,10 @@ body {
 
 }
 
-.textoResultado{
+.textoResultado {
 
-    width: 250px;
-    height: 90%;
+    width: 355px;
+    height: 755px;
     left: 1032px;
     top: 72px;
     font-family: 'Inter', sans-serif;
@@ -106,19 +102,21 @@ body {
     font-weight: 400;
     font-size: 24px;
     margin: 20px;
+    border-color: #0A3871;
 
     color: #495057;
 }
+
 .Copiar {
 
-    width: 328px;
-    height: 67px;
     background: #ffffff;
     border: 2px solid #0A3871;
     border-radius: 24px;
     font-size: 15px;
-    margin-top: 14%;
     margin-left: 10%;
+    width: 336px;
+    height: 67px;
+    left: 1032px;
 
 
 }
@@ -287,3 +285,106 @@ button:focus:before {
 .ocultar {
     display: none;
 }
+
+/* @media screen and (max-width: 768px) {
+    * {
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    .texto-a-encriptar {
+        width: 647px;
+        height: 330px;
+        left: 40px;
+        top: 192px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0A3871;
+    }
+
+    .cuadro-respuesta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        position: absolute;
+        width: 655px;
+        height: 224px;
+        left: 14px;
+        top: 800px;
+    }
+
+    .dibujo-nene {
+        display: none
+    }
+
+    .texto-encriptado {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+        position: absolute;
+        width: 688px;
+        height: 133px;
+        left: 40px;
+        top: 100px;
+    }
+
+    .importante {
+
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: #495057;
+        opacity: 0.8;
+        display: block;
+        position: absolute;
+        width: 350px;
+        left: 44px;
+        top: 648px;
+
+    }
+
+    .circulo-exclamacion {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: #495057;
+        opacity: 0.8;
+        display: block;
+        position: absolute;
+        width: 350px;
+        left: -145px;
+        top: 650px;
+    }
+
+    .ingrese-texto {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        position: absolute;
+        width: 688px;
+        height: 67px;
+        left: 7px;
+        top: 695px;
+    }
+}
+
+.pie-pagina {
+    background-color: #0A3871;
+    position: relative;
+    top: 1144px;
+} */
