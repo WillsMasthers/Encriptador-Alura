@@ -1,79 +1,108 @@
-//Las "llaves" de encriptación que utilizaremos son las siguientes:
-
-//La letra "e" es convertida para "enter"//
-//La letra "i" es convertida para "imes"//
-//La letra "a" es convertida para "ai"//
-//La letra "o" es convertida para "ober"//
-//La letra "u" es convertida para "ufat"//
 
 
-let encriptar = document.getElementById("encriptar");
+var botonEncriptar = document.querySelector(".Encriptar");
+var botonDesencriptar = document.querySelector(".Desencriptar");
+var dibujo = document.querySelector(".dibujo-nene");
+var textoinicial = document.querySelector(".texto-a-encriptar");
+var ingreseTexto = document.querySelector(".ingrese-texto");
+var textoencriptado = document.querySelector(".texto-encriptado");
+var resultado = document.querySelector(".textoResultado");
+var botonCopiar = document.querySelector(".botonCopiar");
 
-encriptar.addEventListener('click', () => {
-    let { value } = document.getElementById("textoAEncriptar");
-    let data = value.toLowerCase().split('');
-    let final = document.getElementById("textoEncriptado");
-    let newArray = [];
 
-//ENCRIPTAR
+botonEncriptar.onclick = encriptar;
+botonDesencriptar.onclick = desencriptar;
 
-    data.map(item => {
-        if (item === 'a') {
-            newArray.push('ai');
-        } else if (item === 'e') {
-            newArray.push('enter');
-        } else if (item === 'i') {
-            newArray.push('imes');
-        } else if (item === 'o') {
-            newArray.push('ober');
-        } else if (item === 'u') {
-            newArray.push('ufat');
-        } else {
-            newArray.push(item);
+function ocultar() {
+    dibujo.classList.add("ocultar");
+    textoencriptado.classList.add("ocultar");
+    ingreseTexto.classList.add("ocultar");
+}
+
+function encriptar() 
+{
+    ocultar();
+    var textoaencriptar = recuperartexto();
+    resultado.textContent = encriptarTexto(textoaencriptar);
+    botonCopiar.classList.remove("ocultar");
+}
+
+function desencriptar() 
+{
+    ocultar();
+    var textoadencriptar = recuperartexto()
+    resultado.textContent = desencriptarTexto(textoadencriptar);
+}
+
+function recuperartexto() 
+{
+    var textoaencriptar = document.querySelector(".texto-a-encriptar");
+    return textoaencriptar.value;
+}
+
+function encriptarTexto(textofinal) 
+{
+    var texto = textofinal;
+    var textofinal = "";
+    for (var i = 0; i < texto.length; i++) {
+        if (texto[i] == "e") {
+            textofinal = textofinal + "enter"
         }
-    });
+        else if (texto[i] == "a") {
+            textofinal = textofinal + "ai"
+        }
+        else if (texto[i] == "i") {
+            textofinal = textofinal + "imes"
+        }
+        else if (texto[i] == "o") {
+            textofinal = textofinal + "ober"
+        }
+        else if (texto[i] == "u") {
+            textofinal = textofinal + "ufat"
+        }
+        else {
+            textofinal = textofinal + texto[i]
+        }
+    }
+    console.log(textofinal);
+    return textofinal;
+}
 
-    final.innerHTML = newArray.join('')
-    document.getElementById("textoAEncriptar").value = '';
-    document.getElementById("textoEncriptado").style.display = 'none';
+function desencriptarTexto(textofinal) 
+{
+    var texto = textofinal;
+    var textofinal = "";
+    for (var i = 0; i < texto.length; i++) {
+        if (texto[i] == "e") {
+            textofinal = textofinal + "e"
+            i = i +4;
+        }
+        else if (texto[i] == "a") {
+            textofinal = textofinal + "a"
+            i = i +1;
+        }
+        else if (texto[i] == "i") {
+            textofinal = textofinal + "i"
+            i = i +3;
+        }
+        else if (texto[i] == "o") {
+            textofinal = textofinal + "o"
+            i = i +3;
+        }
+        else if (texto[i] == "u") {
+            textofinal = textofinal + "u"
+            i = i +3;
+        }
+        else {
+            textofinal = textofinal + texto[i]
+        }
+    }
+    //console.log(textofinal);
+    return textofinal;
+}
 
-});
-
-
-//DESENCRIPTAR
-let desencriptar = document.getElementById("desencriptar");
-
-desencriptar.addEventListener('click', () => {
-    let { value } = document.getElementById("textoAEncriptar");
-    let data = value.toLowerCase()
-    let result = data.replaceAll('ai', 'a').replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ober', 'o').replaceAll('ufat', 'u')
-    let final = document.getElementById("div-p");
-
-    final.innerHTML = result
-    document.getElementById("textoEncriptado").style.display = 'none';
-    document.getElementById("textoFinal").style.display = 'flex'
-    document.getElementById("textoAEncriptar").value = '';
-
-});
-
-
-//BOTON COPIAR
-
-let copy = document.getElementById("copy")
-
-copy.addEventListener('click', () => {
-    let content = document.getElementById("textoFinal");
-
-    let element = content.innerText;
-    let inputelement = document.createElement('input');
-    inputelement.setAttribute('value', element);
-    document.body.appendChild(inputelement);
-    inputelement.select();
-    document.execCommand('copy');
-
-    inputelement.parentNode.removeChild(inputelement);
-    document.getElementById("textoFinal").style.display = 'none'
-    document.getElementById("textoEncriptado").style.display = 'flex'
-
-
-});
+function copiar()
+{
+    var p=document.querySelector(".textoResultado").textContent;
+    navigator.clipboard.writeText(p);
+}
