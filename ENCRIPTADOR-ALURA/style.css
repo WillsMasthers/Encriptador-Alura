@@ -288,6 +288,7 @@ button:focus:before {
 }
 
 @media screen and (max-width: 375px) {
+
     * {
         margin: 0px;
     }
@@ -373,10 +374,10 @@ button:focus:before {
         padding-top: 5px;
         gap: 32px;
         position: absolute;
-        width: 331px;
-        height: 231px;
+        width: 330px;
+        height: 197px;
         margin: 0;
-        left: 20px;
+        left: 16px;
         top: 707px;
     }
 
@@ -410,18 +411,20 @@ button:focus:before {
 
     }
 
+
+    .contenedorResultado{
+        display: flex;
+        justify-content: center;
+
+    }
+    
     .textoResultado {
 
-        width: 250px;
-        height: 300px;
-        left: 1050px;
-        top: 72px;
         font-family: 'Inter', sans-serif;
         font-size: 24px;
-        margin: 5px;
-        border-color: #0A3871;
         color: #495057;
-        padding: 5px;
+        word-wrap: break-word;
+
     }
 
 .botonCopiar{
@@ -437,6 +440,6 @@ button:focus:before {
     .pie-pagina {
         background-color: #0A3871;
         position: relative;
-        top: 700px;
+        top: 1100px;
     }
 }
