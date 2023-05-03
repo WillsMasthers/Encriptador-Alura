@@ -290,8 +290,6 @@ button:focus:before {
 @media screen and (max-width: 375px) {
     * {
         margin: 0px;
-        box-sizing: border-box;
-        
     }
 
     .texto-a-encriptar {
@@ -371,7 +369,8 @@ button:focus:before {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 32px;
+        padding: 3px;
+        padding-top: 5px;
         gap: 32px;
         position: absolute;
         width: 331px;
@@ -388,12 +387,13 @@ button:focus:before {
 
     .texto-encriptado {
 
-        position: absolute;
-        width: 300px;
+        position: relative;
         height: 220px;
         left: 15px;
+        top:35px;
         margin: 0;
         font-family: 'Inter', sans-serif;
+        
 
     }
 
@@ -412,7 +412,7 @@ button:focus:before {
 
     .textoResultado {
 
-        width: 355px;
+        width: 250px;
         height: 300px;
         left: 1050px;
         top: 72px;
@@ -421,6 +421,7 @@ button:focus:before {
         margin: 5px;
         border-color: #0A3871;
         color: #495057;
+        padding: 5px;
     }
 
 .botonCopiar{
@@ -436,6 +437,6 @@ button:focus:before {
     .pie-pagina {
         background-color: #0A3871;
         position: relative;
-        top: 895px;
+        top: 700px;
     }
 }
