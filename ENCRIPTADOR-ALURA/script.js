@@ -101,8 +101,3 @@ function desencriptarTexto(textofinal)
     return textofinal;
 }
 
-function copiar()
-{
-    var p=document.querySelector(".textoResultado").textContent;
-    navigator.clipboard.writeText(p);
-}

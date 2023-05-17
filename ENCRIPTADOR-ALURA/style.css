@@ -2,6 +2,8 @@ body {
     background: #E5E5E5;
     margin: 0;
     Padding: 0;
+    font-family: 'Inter', sans-serif;
+    display: flexbox;
 }
 
 
@@ -12,36 +14,61 @@ body {
     padding: 0px;
     gap: 40px;
     position: absolute;
-    width: 120px;
-    height: 48px;
-    left: 40px;
-    top: 40px;
+    width: 7.5rem;
+    height: 3rem;
+    left: 2.5rem;
+    top: 2.5rem;
 
 }
 
 .texto-a-encriptar {
-
     position: absolute;
-    width: 50%;
-    height: 70%;
-    left: 240px;
-    top: 168px;
+    width: 60%;
+    height: 85%;
+    left: 9%;
+    top: 20%;
     background-color: #E5E5E5;
     font-family: 'Inter', sans-serif;
-    font-size: 32px;
+    font-size: 2rem;
     color: #0a3871;
     resize: none;
     border-color: #E5E5E5;
 }
 
+.texto-a-encriptar::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.texto-a-encriptar::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.texto-a-encriptar::-webkit-scrollbar-button:increment,
+.texto-a-encriptar::-webkit-scrollbar-button {
+    display: none;
+}
+
+.texto-a-encriptar::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.texto-a-encriptar::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.texto-a-encriptar::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
 
 .cuadro-respuesta {
 
     position: absolute;
-    width: 400px;
-    height: 900px;
+    width: 25%;
+    height: 110%;
     left: 72.5%;
-    top: 30px;
+    top: 2rem;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -53,24 +80,23 @@ body {
 
 .dibujo-nene {
 
-    margin-top: 200px;
-    margin-left: 30px;
-    width: 336px;
-    height: 304px;
-    left: 1032px;
-    top: 283px;
+    margin-top: 40%;
+    width: 35%;
+    height: 35%;
+    left: 105%;
+    top: 280%;
 
 
 }
 
 .texto-encriptado {
-
-    font-family: 'Inter', sans-serif;
+    position: relative;
     color: black;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.4rem;
     text-align: center;
-    margin-top: 40px;
+    top: 10%;
+    margin-top: 4%;
     margin-bottom: 0;
     border-color: #ffffff;
 
@@ -78,46 +104,76 @@ body {
 }
 
 .ingrese-texto {
-
-    font-family: 'Inter', sans-serif;
+    position: relative;
+    top: 10%;
     display: flex;
-    font-size: 15px;
+    font-size: 1.3rem;
     text-align: center;
     color: #495057;
     border-color: #FFFFFF;
-    width: 100%;
+    width: 90%;
     border-style: none;
-    margin-left: 20px;
+    margin-left: 1rem;
 
 }
 
-.textoResultado {
 
-    width: 355px;
-    height: 300px;
-    left: 1032px;
-    top: 72px;
-    font-family: 'Inter', sans-serif;
+.textoResultado {
+    position: absolute;
+    width: 70%;
+    height: 73%;
+    left: 10%;
+    top: 3%;
+    right: 1%;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 2rem;
     margin: 20px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    overflow: auto;
     border-color: #0A3871;
-
     color: #495057;
+}
+
+.textoResultado::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.textoResultado::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.textoResultado::-webkit-scrollbar-button:increment,
+.textoResultado::-webkit-scrollbar-button {
+    display: none;
+}
+
+.textoResultado::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.textoResultado::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.textoResultado::-webkit-scrollbar-track {
+    border-radius: 10px;
 }
 
 .Copiar {
 
+    position: absolute;
     background: #ffffff;
     border: 2px solid #0A3871;
     border-radius: 24px;
-    font-size: 15px;
-    margin-left: 10%;
+    font-size: 1rem;
     width: 336px;
     height: 67px;
-    left: 1032px;
-
+    top: 116.5%;
+    left: 73.5%;
 
 }
 
@@ -143,38 +199,34 @@ button:focus:before {
     width: 16px;
     height: 16px;
     position: absolute;
-    display: flex;
     opacity: 0.5;
     margin: 0;
-    left: 240px;
-    top: 794px;
+    left: 15.5%;
+    top: 95.7%;
 }
 
 .importante {
-
-    font-family: 'Inter', sans-serif;
     font-size: 20px;
     color: #495057;
     opacity: 0.8;
-    display: block;
     position: absolute;
-    width: 350px;
-    left: 265px;
-    top: 770px;
+    left: 17%;
+    top: 93%;
 
 
 }
 
 .botones {
 
+    position: relative;
     display: flex;
     gap: 24px;
     width: 656px;
     height: 67px;
-    left: 240px;
-    top: 820px;
+    left: 15%;
+    top: 100%;
     margin-top: 10px;
-    position: relative;
+    position: absolute;
 
 }
 
@@ -266,9 +318,8 @@ button:focus:before {
     position: relative;
     padding-left: 0;
     padding-top: 7px;
-    padding-bottom: 7px;
     padding-right: 0;
-    top: 880px;
+    top: 62rem;
 
 }
 
@@ -277,9 +328,7 @@ button:focus:before {
     font-family: 'Poppins', sans-serif;
     color: white;
     text-align: center;
-    margin: 0%;
-    padding: 0%;
-    font-size: 13px;
+    font-size: 1rem;
 
 }
 
@@ -294,152 +343,152 @@ button:focus:before {
     }
 
     .texto-a-encriptar {
-        width: 310px;
-        height: 280px;
-        left: 25px;
-        top: 145px;
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 150%;
-        color: #0A3871;
-        position: relative;
-    }
-
-    .circulo-exclamacion {
-        left: 30px;
-        top: 462px;
-        bottom: 0%;
-    }
-
-    .importante {
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
-        gap: 8px;
-        font-size: 15px;
+        height: 80%;
+        width: 80%;
+        margin: 0%;
+        left: 10%;
+        top: 20%;
         position: absolute;
-        height: 18px;
-        left: 50px;
-        top: 460px;
-
     }
 
-    .botones {
-        padding: 0px;
-        position: absolute;
-        width: 688px;
-        height: 67px;
-        left: 16px;
-        top: 500px;
-        flex-wrap: wrap;
-    }
 
-    .Encriptar {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 24px;
-        gap: 8px;
-        width: 343px;
-        height: 67px;
-        flex: none;
-        order: 0;
-        align-self: stretch;
-        flex-grow: 0;
-    }
-
-    .Desencriptar {
-
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 24px;
-        gap: 8px;
-        width: 343px;
-        height: 67px;
-        flex: none;
-        order: 1;
-        align-self: stretch;
-        flex-grow: 0;
-    }
-
-    .cuadro-respuesta {
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 3px;
-        padding-top: 5px;
-        gap: 32px;
-        position: absolute;
-        width: 330px;
-        height: 197px;
-        margin: 0;
-        left: 16px;
-        top: 707px;
-    }
-
-    
     .dibujo-nene {
         display: none
     }
 
-    .texto-encriptado {
-
-        position: relative;
-        height: 220px;
-        left: 15px;
-        top:35px;
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        
-
+    .cuadro-respuesta {
+        top: 150%;
+        left: 10%;
+        height: 30%;
+        width: 80%;
+        bottom: 10%;
     }
 
+    .texto-encriptado {
+        margin: 1%;
+    }
 
     .ingrese-texto {
-        width: 263px;
-        height: 48px;
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
-        text-align: center;
+        margin-left: 5%;
+    }
+
+    .circulo-exclamacion {
+        left: 10%;
+        top: 109.8%;
+        width: 0.8rem;
+    }
+
+    .importante {
+        left: 15%;
+        top: 110%;
+        font-size: 0.8rem;
+    }
+
+    .botones {
+        left: 5%;
+    }
+
+    .Desencriptar {
         position: absolute;
-        left: 10px;
-        top: 95px;
-
+        top: 130%;
     }
 
-
-    .contenedorResultado{
-        display: flex;
-        justify-content: center;
-
+    .botonCopiar {
+        position: absolute;
+        width: 336px;
+        height: 67px;
+        top: 180%;
     }
-    
-    .textoResultado {
-
-        font-family: 'Inter', sans-serif;
-        font-size: 24px;
-        color: #495057;
-        word-wrap: break-word;
-
-    }
-
-.botonCopiar{
-    position: absolute;
-    padding: 0px;
-    width: 688px;
-    height: 67px;
-    left: -70px;
-    top: 260px;
-    flex-wrap: wrap;
-}
 
     .pie-pagina {
-        background-color: #0A3871;
-        position: relative;
-        top: 1100px;
+        position: absolute;
+        top: 260%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0px;
+    }
+
+    .texto-a-encriptar {
+        height: 40%;
+        width: 55%;
+        margin: 0%;
+        left: 5%;
+        top: 20%;
+    }
+
+
+    .dibujo-nene {
+        display: none
+    }
+
+    .cuadro-respuesta {
+        position: absolute;
+        top: 85%;
+        left: 5%;
+        right: 5%;
+        height: 30%;
+        width: 55%;
+        bottom: 10%;
+    }
+
+    .texto-encriptado {
+        margin: 1%;
+    }
+
+    .ingrese-texto {
+        margin-left: 5%;
+    }
+
+    .circulo-exclamacion {
+        left: 2%;
+        top: 67.9%;
+        width: 0.8rem;
+    }
+
+    .importante {
+        left: 4%;
+        top: 67.99%;
+        font-size: 0.8rem;
+    }
+
+.botones{
+    position: absolute;
+    gap: 10px;
+    left: 0.5%;
+    right: 0.5%;
+    display: flex;
+    top: 70%;
+}
+.Encriptar{
+    height: 100%;
+    width: 35%;
+    
+    
+}
+.Desencriptar{
+    height: 100%;
+    width: 35%;
+}
+    .Copiar {
+        position: absolute;
+        width: 336px;
+        height: 67px;
+        top: 105%;
+        left: 10%;
+    }
+
+    .pie-pagina {
+        position: absolute;
+        top: 120%;
+        width: 70%;
+    }
+
+    .contenedorResultado{
+        display: flexbox;
+
     }
 }
