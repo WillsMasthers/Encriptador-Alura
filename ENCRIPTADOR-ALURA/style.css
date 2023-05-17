@@ -3,9 +3,11 @@ body {
     margin: 0;
     Padding: 0;
     font-family: 'Inter', sans-serif;
-    display: flexbox;
 }
 
+main{
+    margin-top: 3rem;
+}
 
 .logo-alura {
     display: flex;
@@ -81,6 +83,7 @@ body {
 .dibujo-nene {
 
     margin-top: 40%;
+    margin-left: 4%;
     width: 35%;
     height: 35%;
     left: 105%;
