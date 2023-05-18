@@ -9,6 +9,12 @@ body {
 header {
     margin: 50px;
     background-color: pink;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+main {
+    margin-top: 3rem;
 }
 
 .logo-alura {
@@ -116,6 +122,7 @@ section.cuadro-respuesta {
 
 .dibujo-nene {
     margin-top: 40%;
+    margin-left: 4%;
     width: 35%;
     height: 35%;
     left: 105%;
@@ -200,7 +207,7 @@ section.cuadro-respuesta {
     font-size: 1rem;
     width: 336px;
     height: 67px;
-    top: 116.5%;
+    top: 101%;
     left: 73.5%;
 }
 
