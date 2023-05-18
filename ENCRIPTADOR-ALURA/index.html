@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge encriptador de texto Alura </title>
-    <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/Logo-favicon.png" class="favicon">
+    <link href="style.css" rel="stylesheet" type="text/css">
 
 
 </head>
@@ -26,49 +26,60 @@
     </header>
 
     <main>
+        <div class="row">
+            <div class="col col-md">
+                <div class="row">
+                    <section class="texto">
+                        <textarea class="texto-a-encriptar" id="textoAEncriptar" placeholder="Ingrese su texto aquí"></textarea>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col">
 
-        <section class="texto">
-            <textarea class="texto-a-encriptar" id="textoAEncriptar" placeholder="Ingrese su texto aquí"></textarea>
-        </section>
+                        <section>
+                            <div class="botonCopiar ocultar">
+                            <button class="Copiar" id="boton-copiar" onclick="copiar()">Copiar </button>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="texto-importante">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="circulo-exclamacion">
+                                    <path
+                                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                                </svg>
+                                <p class="importante"> Solo letras minúsculas y sin acentos</p>
+                            </div>
 
-        <section class="cuadro-respuesta">
-            <div class="dibujo-nene">
-                <img src="assets/Muñeco.png" id="imagendibujo">
+                        </section>
+
+                        <section class="botones">
+
+                            <input type="button" class="Encriptar" value="Encriptar"></input>
+                            <input type="button" class="Desencriptar" value="Desencriptar"></input>
+
+                        </section>
+
+                    </div>
+                </div>
+
             </div>
-            <div class="texto-encriptado">
-                <p>Ningún mensaje fue encontrado</p> 
+            <div class="col col-sm">
+                <section class="cuadro-respuesta">
+                    <div class="dibujo-nene">
+                        <img src="assets/Muñeco.png" id="imagendibujo">
+                    </div>
+                    <div class="texto-encriptado">
+                        <p>Ningún mensaje fue encontrado</p> 
+                    </div>
+                    <div class="ingrese-texto">
+                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                    <div class="contenedorResultado" id="contenedorResultado">
+                        <p class="textoResultado"></p>
+                    </div>
+                </section>
             </div>
-            <div class="ingrese-texto">
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
-            <div class="contenedorResultado" id="contenedorResultado">
-                <p class="textoResultado"></p>
-            </div>
-        </section>
-        <section>
-            <div class="botonCopiar ocultar">
-            <button class="Copiar" id="boton-copiar" onclick="copiar()">Copiar </button>
-            </div>
-        
-        <section>
-            <div class="texto-importante">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="circulo-exclamacion">
-                    <path
-                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
-                </svg>
-                <p class="importante"> Solo letras minúsculas y sin acentos</p>
-            </div>
-
-        </section>
-
-        <section class="botones">
-
-            <input type="button" class="Encriptar" value="Encriptar"></input>
-            <input type="button" class="Desencriptar" value="Desencriptar"></input>
-
-        </section>
-
-
+        </div>
 
         <footer class="pie-pagina">
             <div>
